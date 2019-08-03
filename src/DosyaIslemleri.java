@@ -205,7 +205,8 @@ public class DosyaIslemleri extends javax.swing.JFrame {
                     if(eleman1 == eleman2) {                        
                         listModel3.addElement(listModel1.elementAt(i));
                         listModel4.addElement(listModel1.elementAt(j));
-                        dosyaSil((String) listModel1.elementAt(j)
+                        DosyaSil yeni = new DosyaSil();
+                        yeni.dosyalariSil((String) listModel1.elementAt(j)
                                 , klasor + "\\" +(String)listModel1.elementAt(j));
                     }
                 }
@@ -248,7 +249,7 @@ public class DosyaIslemleri extends javax.swing.JFrame {
         jLabel1.setText("Seçilen Klasör: " + klasor);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void dosyaSil(String silinecekDosyaAdi, String tamYolu) {
+    /*private void dosyaSil(String silinecekDosyaAdi, String tamYolu) {
         
         File silinecekDosya = new File(tamYolu);
         boolean sonuc = silinecekDosya.delete();
@@ -259,7 +260,7 @@ public class DosyaIslemleri extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, silinecekDosyaAdi + " isimli Resim Silinemedi !!!\n" 
                     + "Klasör Yolu: " + klasor);
         
-    }
+    }*/
         
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -299,7 +300,7 @@ public class DosyaIslemleri extends javax.swing.JFrame {
     private DefaultListModel listModel3;
     private DefaultListModel listModel4;
     private DefaultListModel listModel5;
-    private String klasor;
+    public String klasor;
     private String dosyaTuru;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
